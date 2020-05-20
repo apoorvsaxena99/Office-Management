@@ -77,11 +77,11 @@ class LocalStore {
 document.addEventListener('DOMContentLoaded', Contact.displaycontact);
 document.querySelector('#contact-form').addEventListener('submit', (e) => {
     e.preventDefault();
-    const name = document.querySelector('#name');
-    const email = document.querySelector('#email');
-    const birthday = document.querySelector('#birthday');
-    const designation = document.querySelector('#designation');
-    const interest = document.querySelector('#interest');
+    const name = document.querySelector('#name').value;
+    const email = document.querySelector('#email').value;
+    const birthday = document.querySelector('#birthday').value;
+    const designation = document.querySelector('#designation').value;
+    const interest = document.querySelector('#interest').value;
     if (name === '' || email === '' || birthday === '' || designation === '' || interest === '') {
         Contact.showAlert('Please Fill All The Fields', 'danger');
     } else {
